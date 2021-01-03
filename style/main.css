@@ -1,0 +1,107 @@
+:root { /* Aplica direto na raiz */
+  --vermelho: #e50914; /* Declaração de variavel */
+  --preta: #141414;
+}
+
+* { /* Altera o ducumento todo */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Limita o tamanho da caixa */
+}
+
+/* elementos base */
+
+body { /* Altera tudo que for relacionado a tag BODY */
+  background: var(--preta); /* Utilizando o valor da variavel */
+  font-family: 'Arial', Times, serif; /* Familia de fontes */
+  color: white;
+}
+
+header .container { /* As classes são referenciadas pelo ponto */
+  display: flex; /* Alinha o conteudo dentro da caixa */
+  flex-direction: row;
+  align-items: center; /* Alinha os itens ao centro */
+  justify-content: space-between; /* Coloca um espaço entre os itens */
+}
+
+header .logo {
+  margin-left: 5px;
+  color: var(--vermelho);
+  font-family: 'Arial Black';
+  font-size: 40px;
+}
+
+header nav a { /* Altera o elemento A dentro do NAV, dentro do Header */
+  text-decoration: none;
+  color: #AAA;
+  margin-right: 10px;
+}
+
+header nav a:hover { /* Altera o elemento A no evento HOVER */
+  color: #fff;
+}
+
+/* filme principal */
+.filme-principal {
+  font-size: 16px; /* Tamanho da fonte*/
+  background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50) 100%), url('/img/capa-house.jpg'); /* Imagem de fundo */
+  
+  height: 400px; /* Tamanho da imagem */
+  background-size: cover; /* Colocando para ficar do tamanho total do espaço */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Para os itens começarem sempre da esquerda */
+}
+
+.filme-principal .descricao {
+  margin-top: 10px;
+  margin-bottom: 90px;
+}
+
+.filme-principal .titulo {
+  margin-top: 15%;
+  font-size: 40px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao {
+  background-color: rgba(0, 0, 0, .50);
+  border: none;
+  color: white;
+
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+
+  cursor: pointer; /* Altera o cursor para ponteiro quando passar em cima */
+  transition: .3s ease all; /* Demora um tempo para mudar a cor */
+}
+
+.botao:hover {
+  background-color: white;
+  color: black;
+}
+
+.botao i {
+  margin-right: 8px;
+}
+
+.container {
+  margin-left: 20px;
+}
+
+.filme-principal .container {
+  width: 70%;
+}
+
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.carrosel-filmes {
+  margin-top: 5px;
+}
